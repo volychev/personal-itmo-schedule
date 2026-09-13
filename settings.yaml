@@ -2,7 +2,7 @@
 
 default_calendar_prefix: "ITMO"
 
-summary_template: "{title} — {type}. {format}"
+summary_template: "{title} — {type}{format}"
 description_template: "Преподаватель: {teacher}\n\n{note}"
 
 booking_summary_template: "Бронирование: {title}"
@@ -11,14 +11,15 @@ booking_description_template: "{format}\n\n{note}"
 ignore:
   - match: "История России и мира в ХХ веке"
     format: REMOTE
+
   - match: "Теория вероятности"
     type: LECTURE
 
 renames:
-  - "English B1.2 / Английский язык B1.2": "Английский язык B1.2"
+  - "English B1.2 / Английский язык B1.2": "Английский язык"
   - "Объектно-ориентированное проектирование и программирование на C#": "Объектно-ориентированное проектирование"
 
 format_labels:
-  1: "Гибрид"
-  2: "Очно"
-  3: "Дистанционно"
+  1: ". Гибрид"
+  2: ""
+  3: ". Дистанционно"
