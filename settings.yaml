@@ -11,12 +11,12 @@ booking_description_template: "{format}\n\n{note}"
 ignore:
   - match: "История России и мира в ХХ веке"
     format: REMOTE
-
   - match: "Теория вероятности"
     type: LECTURE
 
 renames:
   - "English B1.2 / Английский язык B1.2": "Английский язык B1.2"
+  - "Объектно-ориентированное проектирование и программирование на C#": "Объектно-ориентированное проектирование"
 
 format_labels:
   1: "Гибрид"
