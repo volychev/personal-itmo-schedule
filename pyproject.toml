@@ -1,0 +1,37 @@
+[project]
+name = "itmo-sync"
+version = "0.1.0"
+description = "Serverless ITMO University schedule parser and iCalendar exporter. Runs automatically on GitHub Actions with zero hosting required."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "icalendar>=7.3.0",
+    "itmo-schedule",
+    "jinja2>=3.1.6",
+    "pydantic-settings[yaml]>=2.15.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.5",
+]
+
+[project.scripts]
+itmo-sync = "itmo_sync:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
+
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.7",
+]
+
+[tool.uv.workspace]
+members = [
+    "packages/itmo_schedule",
+]
+
+[tool.uv.sources]
+itmo-schedule = { workspace = true, editable = true }
