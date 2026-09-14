@@ -1,0 +1,8 @@
+templates:
+  events:
+    summary: "{title} — {type}{format}"
+    description: "Преподаватель: {teacher}\n\n{note}"
+
+  bookings:
+    summary: "Бронирование: {title}"
+    description: "{format}\n\n{note}"
